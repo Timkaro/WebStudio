@@ -466,17 +466,17 @@ button {
   align-items: flex-start;
   justify-content: flex-start;
   width: 100%;
+  gap: 72px;
+}
+
+.feature-title,
+.title {
+  text-align: center;
 }
 
 @media screen and (max-width: 1157px) {
-  .feature-list {
-    gap: 24px;
-  }
   .feature-icons {
     display: none;
-  }
-  .feature-list-mark:not(:last-child) {
-    margin-bottom: 72px;
   }
   .feature-title,
   .title {
@@ -484,7 +484,6 @@ button {
     font-size: 36px;
     line-height: 1.11;
     letter-spacing: 0.02em;
-    text-align: center;
     color: #2e2f42;
     margin-bottom: 8px;
   }
@@ -499,6 +498,9 @@ button {
 }
 
 @media screen and (min-width: 768px) {
+  .feature-list {
+    column-gap: 24px;
+  }
   .feature-list-mark {
     width: calc((100% - 24px) / 2);
   }
@@ -506,15 +508,15 @@ button {
   .feature-list-mark:nth-child(4) {
     margin-bottom: 0;
   }
- }
+  .feature-title {
+  text-align: left;
+  }
+}
 
 @media screen and (min-width: 1158px) {
   section:not(:nth-child(1)) {
     padding-top: 120px;
     padding-bottom: 120px;
-  }
-  .feature-list {
-    gap: 24px;
   }
   .feature-list-mark {
     width: calc((100% - 72px) / 4);
@@ -554,22 +556,16 @@ button {
 .content {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 72px;
   justify-content: center;
 }
 
 .content-mark {
   border-radius: 0 0 4px 4px;
-  padding: 0px 0px 32px 0px;
   max-width: 264px;
   max-height: 428px;
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
   background-color: #ffffff;
-}
-
-.content-mark:nth-child(1),
-.content-mark:nth-child(2) {
-  margin-bottom: 64px;
 }
 
 .content-mark-descr {
@@ -622,6 +618,10 @@ button {
 }
 
 @media screen and (min-width: 768px) {
+  .content {
+    column-gap: 24px;
+    row-gap: 64px;
+  }
   .content-mark {
     width: calc((100% - 24px) / 2);
   }
@@ -748,8 +748,7 @@ button {
 }
 
 .down-icons {
-  padding: 72px 0;
-  margin: 0 auto;
+  margin: 72px auto;
 }
 
 .down-icons-descr {
@@ -819,21 +818,18 @@ button {
 
 @media screen and (min-width: 768px) {
   .down .container {
+    width: 584px;
     row-gap: 72px;
+    column-gap: 24px;
   }
   .down-text {
-    width: 357px;
-    padding-left: 93px;
+    width: 264px;
   }
   .logo-down {
     text-align: left;
   }
   .down-icons{
-    padding: 0;
-    margin-left: 24px;
-  }
-  .down-mail {
-    padding-left: 93px;
+    margin: 0;
   }
   .down-icons-descr {
     text-align: left;
@@ -854,18 +850,19 @@ button {
     padding-bottom: 100px;
   }
   .down .container {
+    min-width: 1140px;
+    flex-wrap: nowrap;
     gap: 0;
   }
-  .down-text {
+  .down-descr {
     width: 264px;
-    padding-left: 0;
   }
   .down-icons {
-    padding: 0 80px 0 120px;
-    margin: 0;
+    margin: 0 80px 0 120px;
   }
-  .down-mail {
-    padding-left: 0;
+  .down-form {
+    width: 453px;
+    flex-wrap: nowrap;
   }
 } 
 
@@ -1077,4 +1074,8 @@ button {
   .agree-text {
     padding: 0;
   }
+}
+
+.modal-overlay:not(.is-open) .modal {
+  transform: translate(-50%, -50%) scale(1.5);
 }

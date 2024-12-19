@@ -164,7 +164,7 @@
           <h1 class="hero-image-title">
             Effective Solutions for Your Business
           </h1>
-          <button class="hero-image-btn" type="button">Order Service</button>
+          <button class="hero-image-btn" type="button" data-modal-open>Order Service</button>
         </div>
       </section>
 
@@ -817,9 +817,9 @@
       </div>
     </footer>
 
-    <div class="modal-overlay">
+    <div class="modal-overlay" data-modal>
       <div class="modal">
-        <button type="button" class="close-btn">
+        <button type="button" class="close-btn" data-modal-close>
           <svg width="8" height="8" fill="none" class="modal-close">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
@@ -913,5 +913,6 @@
         </form>
       </div>
     </div> 
+    <script src="./js/modal.js"></script>
   </body>
 </html>
